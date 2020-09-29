@@ -4,8 +4,12 @@ kind: Deployment
 metadata:
   name: shipping
   namespace: dev
+  labels:
+    name: shipping
 spec:
   replicas: 1
+  matchLabels:
+    name: shipping
   template:
     metadata:
       labels:
