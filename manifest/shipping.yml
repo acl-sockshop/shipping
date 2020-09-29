@@ -4,12 +4,11 @@ kind: Deployment
 metadata:
   name: shipping
   namespace: dev
-  labels:
-    name: shipping
 spec:
   replicas: 1
-  matchLabels:
-    name: shipping
+  selector:
+    matchLabels:
+      app: shipping
   template:
     metadata:
       labels:
